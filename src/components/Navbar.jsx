@@ -1,27 +1,28 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, forwardRef } from "react";
 
-export default function Navbar( {cuteMode} ) {
+
+export default function Navbar( {cuteMode, scrollToProjects, scrollToContact, scrollToHome} ) {
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
     return <nav className="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
                 <div className="flex items-center space-x-1 group cursor-pointer">
                     <span className="text-lg sm:text-xl md:text-2xl font-medium">
-                        <a href="/" className={cuteMode ? "text-[#9C7777]" : "text-[#B7AABF]"}>
+                        <button onClick={scrollToHome} className={cuteMode ? "text-[#9C7777] hover:text-white hover:cursor-pointer" : "text-[#B7AABF] hover:text-[#9884A3] hover:cursor-pointer"}>
                             {cuteMode ? "allison wang" : "Allison Wang"}
-                        </a>
+                        </button>
                     </span>
                 </div>
 
                 {/* Nav Links */}
-                <div className="hidden  text-small lg:text-base font-medium md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="#projects" className={cuteMode ? "text-[#9C7777] hover:text-white" : "text-[#B7AABF] hover:text-[#9884A3]"}>
+                <div className="hidden text-small lg:text-base font-medium md:flex items-center space-x-6 lg:space-x-8">
+                    <button onClick={scrollToProjects} className={cuteMode ? "text-[#9C7777] hover:text-white hover:cursor-pointer" : "text-[#B7AABF] hover:text-[#9884A3] hover:cursor-pointer"}>
                         {cuteMode ? "my projects" : "My Projects"}
-                    </a>
-                    <a href="#testimonials" className={cuteMode ? "text-[#9C7777] hover:text-white" : "text-[#B7AABF] hover:text-[#9884A3]"}>
+                    </button>
+                    <button onClick={scrollToContact} className={cuteMode ? "text-[#9C7777] hover:text-white hover:cursor-pointer" : "text-[#B7AABF] hover:text-[#9884A3] hover:cursor-pointer"}>
                         {cuteMode ? "contact" : "Contact"}
-                    </a>
+                    </button>
                 </div>
 
                 <button className="md:hidden p-2 text-gray-300 hover:text-white" onClick={() => setMobileMenuIsOpen((prev) => !prev)}>
@@ -36,8 +37,8 @@ export default function Navbar( {cuteMode} ) {
         {mobileMenuIsOpen && 
             <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 animate-in slide-in-from-top duration-300">
                 <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
-                    <a href="#features" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white text-small lg:text-base">Features</a>
-                    <a href="#pricing" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white text-small lg:text-base">Pricing</a>
+                    <button onClick={() => {scrollToProjects(); setMobileMenuIsOpen(false)}} className="block text-gray-300 hover:text-white text-small lg:text-base">Features</button>
+                    <button onClick={() => {scrollToContact(); setMobileMenuIsOpen(false)}} className="block text-gray-300 hover:text-white text-small lg:text-base">Pricing</button>
                     <a href="#testimonials" onClick={() => setMobileMenuIsOpen(false)} className="block text-gray-300 hover:text-white text-small lg:text-base">Testimonials</a>
                 </div>
             </div>}

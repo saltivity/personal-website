@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef } from "react";
 import { projects } from "./ProjectsData";
 import ProjectCard from "./ProjectCard";
 import ProjectPopup from "./ProjectPopup";
 
-export default function Projects({setProjectOpen}) {
+const Projects = forwardRef(({setProjectOpen}, ref) => {
     const [activeProject, setActiveProject] = useState(null);
 
     useEffect(() => { setProjectOpen(activeProject !== null);}, [activeProject]);
 
     return (
-        <section className="py-20 px-20 max-w-7xl mx-auto">
-            <h2 className="text-3xl font-semibold mb-12 text-center pb-20">Projects</h2>
+        <section ref={ref} id="projects" className="py-20 px-20 max-w-7xl mx-auto">
+            <h2 className="text-3xl sm:text-5xl font-semibold mb-10 text-center pb-20">Projects</h2>
 
             <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
                 {projects.map((project) => (<ProjectCard key={project.id} project={project} onClick={setActiveProject} />))}
@@ -19,4 +19,6 @@ export default function Projects({setProjectOpen}) {
             <ProjectPopup project={activeProject} onClose={() => setActiveProject(null)}/>
         </section>
     );
-}
+});
+
+export default Projects;

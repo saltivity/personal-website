@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, forwardRef } from "react"
 
-export default function Home( {cuteMode} ) {
+const Home = forwardRef(( {cuteMode}, ref ) => {
     const [mousePosition, setMousePosition] = useState({x:0, y: 0});
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export default function Home( {cuteMode} ) {
     }, []);
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:pg-8 overflow-hidden">
+        <section ref={ref} className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:pg-8 overflow-hidden">
             <div className="max-w-7xl mx-auto text-center relative w-full">
                 <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative">  
                     <div className="flex flex-col sm:items-center lg:items-start text-left px-30">
@@ -25,7 +25,7 @@ export default function Home( {cuteMode} ) {
                                 introduction
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-12">
-                            <button className="group h-10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#B7AABF] rounded-lg font-semibold text-sm sm:text-base hover:scale-102 hover:bg-[#9884A3] flex items-center justify-center">
+                            <button className="group h-10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#B7AABF] rounded-lg font-semibold text-sm sm:text-base hover:scale-102 hover:bg-[#9884A3] hover:cursor-pointer flex items-center justify-center">
                                 <span>Resume</span>
                             </button>
                         </div>
@@ -52,4 +52,6 @@ export default function Home( {cuteMode} ) {
             </div> */}
         </section>
     );
-}
+});
+
+export default Home;
