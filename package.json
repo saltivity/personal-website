@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/comic-neue": "^5.2.7",
+    "@fontsource/share-tech": "^5.2.8",
     "@tailwindcss/vite": "^4.1.17",
     "lucide-react": "^0.556.0",
     "react": "^19.2.0",

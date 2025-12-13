@@ -1,0 +1,55 @@
+import { useEffect, useState } from "react"
+
+export default function Home( {cuteMode} ) {
+    const [mousePosition, setMousePosition] = useState({x:0, y: 0});
+
+    useEffect(() => {
+        function handleMouseMove(e) {
+            setMousePosition({x: e.clientX, y: e.clientY});
+        }
+
+        window.addEventListener("mousemove", handleMouseMove);
+
+        return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, []);
+
+    return (
+        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:pg-8 overflow-hidden">
+            <div className="max-w-7xl mx-auto text-center relative w-full">
+                <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative">  
+                    <div className="flex flex-col sm:items-center lg:items-start text-left px-30">
+                        <h1 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 sm:mb-6 leading-tight">
+                            <span>Hi, I'm Allison!</span>
+                        </h1>
+                        <p className="text-md sm:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-8">
+                                introduction
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-12">
+                            <button className="group h-10 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#B7AABF] rounded-lg font-semibold text-sm sm:text-base hover:scale-102 hover:bg-[#9884A3] flex items-center justify-center">
+                                <span>Resume</span>
+                            </button>
+                        </div>
+                    </div> 
+                    <img src="A.png"/>
+                </div>
+                
+            </div>
+
+
+            {/* <div className="absolute inset-0 opacity-30" style={{
+                // background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.15), transparent 40%)`
+            }}/>
+
+            {/* <div className="absolute top-20 left-4 sm:left-10 w-48 sm: w-72 h-48 sm:h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"/>
+            <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm: w-96 h-64 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"/>
+        
+            <div>
+                <div>
+                    <div>
+                        <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-3 bg-white/5 backdrop-blur-sm border-white/10">TEST</div>
+                    </div>
+                </div>
+            </div> */}
+        </section>
+    );
+}

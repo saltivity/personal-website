@@ -1,22 +1,27 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar( {cuteMode} ) {
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
     return <nav className="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
                 <div className="flex items-center space-x-1 group cursor-pointer">
                     <span className="text-lg sm:text-xl md:text-2xl font-medium">
-                        <span className="text-[#9C7777]">allison wang</span>
+                        <a href="/" className={cuteMode ? "text-[#9C7777]" : "text-[#B7AABF]"}>
+                            {cuteMode ? "allison wang" : "Allison Wang"}
+                        </a>
                     </span>
                 </div>
 
                 {/* Nav Links */}
-                <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="#features" className="text-[#9C7777] hover:text-white text-small lg:text-base font-medium">home</a>
-                    <a href="#pricing" className="text-[#9C7777] hover:text-white text-small lg:text-base font-medium">my projects</a>
-                    <a href="#testimonials" className="text-[#9C7777] hover:text-white text-small lg:text-base font-medium">contact</a>
+                <div className="hidden  text-small lg:text-base font-medium md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#projects" className={cuteMode ? "text-[#9C7777] hover:text-white" : "text-[#B7AABF] hover:text-[#9884A3]"}>
+                        {cuteMode ? "my projects" : "My Projects"}
+                    </a>
+                    <a href="#testimonials" className={cuteMode ? "text-[#9C7777] hover:text-white" : "text-[#B7AABF] hover:text-[#9884A3]"}>
+                        {cuteMode ? "contact" : "Contact"}
+                    </a>
                 </div>
 
                 <button className="md:hidden p-2 text-gray-300 hover:text-white" onClick={() => setMobileMenuIsOpen((prev) => !prev)}>
