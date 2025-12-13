@@ -31,7 +31,7 @@ function App() {
   return <div
   className={
     cuteMode
-      ? "min-h-screen bg-[#D7CBBA] text-black overflow-hidden transition-all duration-500"
+      ? "min-h-screen bg-[#e6daca] text-black overflow-hidden transition-all duration-500"
       : "min-h-screen bg-gray-900 text-white overflow-hidden transition-all duration-500"
   }
 >

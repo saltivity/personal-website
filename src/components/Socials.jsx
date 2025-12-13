@@ -9,13 +9,13 @@ export default function Socials({cuteMode, projectOpen}) {
         ${cuteMode ? "text-[#9C7777]" : "text-[#B7AABF]"}
         ${projectOpen ? "hidden sm:flex" : "flex"}`}>
         
-        <a href="https://github.com/saltivity" target="_blank" className="hover:text-[#9884A3]">
+        <a href="https://github.com/saltivity" target="_blank" className= { cuteMode ? "hover:text-[#bf9393]" : "hover:text-[#9884A3]"}>
             <Github className="w-8 h-8"/>
         </a>
-        <a href="https://www.linkedin.com/in/allison-wang-9a7267277/" target="_blank" className="hover:text-[#9884A3]">
+        <a href="https://www.linkedin.com/in/allison-wang-9a7267277/" target="_blank" className= { cuteMode ? "hover:text-[#bf9393]" : "hover:text-[#9884A3]"}>
             <Linkedin className="w-8 h-8"/>
         </a>
-        <a href="mailto:allisonqingwang@gmail.com" className="hover:text-[#9884A3]">
+        <a href="mailto:allisonqingwang@gmail.com" className= { cuteMode ? "hover:text-[#bf9393]" : "hover:text-[#9884A3]"}>
             <Mail className="w-8 h-8"/>
         </a>
         <div className= {

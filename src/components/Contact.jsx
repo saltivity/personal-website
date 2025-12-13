@@ -1,6 +1,6 @@
 import { useState, forwardRef } from 'react';
 
-const Contact = forwardRef((props, ref) => {
+const Contact = forwardRef(({cuteMode}, props, ref) => {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
@@ -20,27 +20,30 @@ const Contact = forwardRef((props, ref) => {
 
     return (
     <section ref={ref} className="py-16 px-6 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-semibold text-center mb-8">
-        Contact Me
-      </h2>
+      <h2 className="text-3xl font-semibold text-center mb-8"> {cuteMode ? "contact me" : "Contact Me"}</h2>
 
       <form className="space-y-6 px-20 sm:px-40" onSubmit={onSubmit}>
         <div>
-          <label className="block text-sm font-medium mb-1">Name</label>
-          <input type="text" name="name" required className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-indigo-300" placeholder="Your name"/>
+          <label className="block text-sm font-medium mb-1"> {cuteMode ? "name" : "Name"}</label>
+          <input type="text" name="name" placeholder="Your name" required className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring "
+            ${cuteMode ? "border-gray-700 focus:ring-[#9C7777]" : "border-gray-300 focus:ring-[#B7AABF]"}`}/>
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Email</label>
-          <input type="email" name="email" required className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-indigo-300" placeholder="E-mail"/>
+          <label className="block text-sm font-medium mb-1">{cuteMode ? "email" : "Email"}</label>
+          <input type="email" name="email" placeholder="Email" required className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring "
+            ${cuteMode ? "border-gray-700 focus:ring-[#9C7777]" : "border-gray-300 focus:ring-[#B7AABF]"}`}/>
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Message</label>
-          <textarea name="message" required rows="5" className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-indigo-300" placeholder="Your message"></textarea>
+          <label className="block text-sm font-medium mb-1">{cuteMode ? "message" : "Message"}</label>
+          <textarea name="message" required rows="5" placeholder="Your message" className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring "
+            ${cuteMode ? "border-gray-700 focus:ring-[#9C7777]" : "border-gray-300 focus:ring-[#B7AABF]"}`}></textarea>
         </div>
 
-        <button type="submit" className="w-full bg-[#B7AABF] text-white font-semibold py-3 rounded-lg hover:bg-[#9884A3] hover:cursor-pointer transition">Send Message</button>
+        <button type="submit" className={`w-full text-white font-semibold py-3 rounded-lg hover:cursor-pointer transition
+            ${cuteMode ? "bg-[#9C7777] hover:bg-[#bf9393]" : "bg-[#B7AABF] hover:bg-[#9884A3]" }
+        `}> {cuteMode ? "send message" : "Send Message"}</button>
       </form>
     </section>
     );
