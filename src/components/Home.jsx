@@ -3,19 +3,10 @@ import { useEffect, useState, forwardRef } from "react"
 const Home = forwardRef(( {cuteMode}, ref ) => {
     const [mousePosition, setMousePosition] = useState({x:0, y: 0});
 
-    useEffect(() => {
-        function handleMouseMove(e) {
-            setMousePosition({x: e.clientX, y: e.clientY});
-        }
-
-        window.addEventListener("mousemove", handleMouseMove);
-
-        return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, []);
-
     return (
         <section ref={ref} className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:pg-8 overflow-hidden">
-            <div className="max-w-7xl mx-auto text-center relative w-full">
+            {cuteMode && (<img className="absolute z-0 fade-in" src="src/assets/flowers.png"/>)}
+            <div className="max-w-7xl mx-auto text-center relative w-full z-10">
                 <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative">  
                     <div className="flex flex-col sm:items-center lg:items-start text-left px-30">
                         <h1 className= {"whitespace-normal sm:whitespace-nowrap text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 sm:mb-6 leading-tight"}>
@@ -31,7 +22,7 @@ const Home = forwardRef(( {cuteMode}, ref ) => {
                             </button>
                         </div>
                     </div> 
-                    <img src="A.png"/>
+                    <img className="relative z-20" src="A.png"/>
                 </div>
                 
             </div>

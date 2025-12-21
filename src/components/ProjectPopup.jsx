@@ -16,14 +16,14 @@ export default function ProjectPopup({ project, onClose, cuteMode }) {
         <div className={`relative rounded-xl max-w-xl w-full p-6 animate-fadeIn
           ${cuteMode ? "bg-[#e6daca] border-[2px] border-[#9C7777]" : "bg-gray-900 border-[2px] border-[#B7AABF]"}
         `}>
-          <button onClick={onClose} className="absolute text-2xl right-4 top-4 hover:cursor-pointer">
+          <button onClick={onClose} className="absolute text-2xl right-2 top-2 hover:cursor-pointer">
             <CircleX className={ cuteMode ? "text-[#9C7777] hover:text-[#bf9393]": "text-[#B7AABF] hover:text-[#9884A3]"}/>
           </button>
 
           <img src={project.image} className="w-full h-56 object-cover rounded-lg mb-4"/>
 
           <h2 className="text-2xl font-semibold">{project.title}</h2>
-          <p className="mt-2 text-gray-700">{project.description}</p>
+          <p className={`mt-2 ${cuteMode ? "text-gray-800" : "text-gray-200"}`}>{project.details}</p>
 
           <div className="flex flex-wrap gap-2 mt-4">
             {project.tech.map((t) => (

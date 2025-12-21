@@ -1,6 +1,6 @@
 import { useState, forwardRef } from 'react';
 
-const Contact = forwardRef(({cuteMode}, props, ref) => {
+const Contact = forwardRef(({cuteMode}, ref) => {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {

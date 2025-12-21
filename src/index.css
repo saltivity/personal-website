@@ -12,6 +12,11 @@
   .duration-300 {
     animation-duration: 300ms;
   }
+
+  .fade-in {
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+  }
 }
 
 @keyframes slideInFromTop {
@@ -24,4 +29,9 @@
       opacity: 1;
       transform: translateY(-0);
     }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
