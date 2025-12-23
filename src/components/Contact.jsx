@@ -20,9 +20,12 @@ const Contact = forwardRef(({cuteMode}, ref) => {
 
     return (
     <section ref={ref} className="py-16 px-6 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-semibold text-center mb-8"> {cuteMode ? "contact me" : "Contact Me"}</h2>
+        <div>
+            {cuteMode && (<img className="relative z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 translate-y-16 -translate-x-26 w-50 sm:w-75 sm:translate-y-23 sm:-translate-x-41" src="src/assets/paper2.png"/>)}
+            <h2 className="relative text-3xl sm:text-4xl font-semibold text-center mb-8 z-10"> {cuteMode ? "contact me" : "Contact Me"}</h2>
+        </div>
 
-      <form className="space-y-6 px-20 sm:px-40" onSubmit={onSubmit}>
+        <form className="space-y-6 px-20 sm:px-40" onSubmit={onSubmit}>
         <div>
           <label className="block text-sm font-medium mb-1"> {cuteMode ? "name" : "Name"}</label>
           <input type="text" name="name" placeholder="Your name" required className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring "
