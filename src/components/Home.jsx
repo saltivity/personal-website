@@ -5,7 +5,7 @@ const Home = forwardRef(( {cuteMode}, ref ) => {
 
     return (
         <section ref={ref} className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:pg-8 overflow-hidden">
-            {cuteMode && (<img className="absolute top-12 left-8 w-80 rotate-[-30deg] opacity-80 z-0" src="src/assets/flowers.png"/>)}
+            {/* {cuteMode && (<img className="absolute top-12 right-120 w-80 rotate-[-15deg] opacity-80 z-20" src="src/assets/pink washi tape.png"/>)} */}
             <div className="max-w-7xl mx-auto text-center relative w-full z-10">
                 <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative">  
                     <div className="flex flex-col sm:items-center lg:items-start text-left px-30">
