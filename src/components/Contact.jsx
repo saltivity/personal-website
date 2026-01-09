@@ -19,16 +19,16 @@ const Contact = forwardRef(({cuteMode}, ref) => {
     };
 
     return (
-    <section ref={ref} className="relative py-16 px-6 max-w-5xl mx-auto">
+    <section ref={ref} className="relative py-36 px-6 max-w-5xl mx-auto">
       
-      <div>
-          {cuteMode && (<img className="relative z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 translate-y-16 -translate-x-26 w-50 sm:w-75 sm:translate-y-23 sm:-translate-x-41" src="src/assets/paper2.png"/>)}
-          <h2 className="relative text-3xl sm:text-4xl font-semibold text-center mb-8 z-10"> {cuteMode ? "contact me" : "Contact Me"}</h2>
+      <div className='flex items-center justify-center'>
+        {cuteMode && (<img className="absolute z-0 top-1/2 left-1/2 -translate-y-93 -translate-x-50 w-100 h-50" src="src/assets/paper tape red.png"/>)}
+        <h2 className={"relative text-gray-200 -translate-y-10 text-3xl sm:text-5xl font-semibold text-center mb-8 z-10"}> {cuteMode ? "contact me" : "Contact Me"}</h2>
+        {cuteMode && (<img className="absolute w-84 left-1/2 translate-x-[80%] top-1/2 -translate-y-[120%] rotate-225 z-0 animate-[shake_1.5s_steps(1)_infinite]" src="src/assets/flower sticker 1.png"/>)}
+        {cuteMode && (<img className="absolute w-80 left-1/2 -translate-x-[180%] top-1/2 -translate-y-[120%] rotate-75 z-0 animate-[shake_1.5s_steps(1)_infinite]" src="src/assets/flower sticker 2.png"/>)}
       </div>
 
-      {cuteMode && (<img className="absolute w-80 left-1/2 translate-x-[90%] top-1/2 -translate-y-[110%] rotate-225 z-0 animate-[shake_1.5s_steps(1)_infinite]" src="src/assets/flower sticker 1.png"/>)}
-      {cuteMode && (<img className="absolute w-80 left-1/2 -translate-x-[180%] top-1/2 -translate-y-[110%] rotate-75 z-0 animate-[shake_1.5s_steps(1)_infinite]" src="src/assets/flower sticker 2.png"/>)}
-
+      
       <form className="relative space-y-6 px-20 z-20 sm:px-40" onSubmit={onSubmit}>
         <div>
           <label className="block text-sm font-medium mb-1"> {cuteMode ? "name" : "Name"}</label>
@@ -48,8 +48,8 @@ const Contact = forwardRef(({cuteMode}, ref) => {
             ${cuteMode ? "border-gray-700 focus:ring-[#9C7777]" : "border-gray-300 focus:ring-[#B7AABF]"}`}></textarea>
         </div>
 
-        <button type="submit" className={`w-full text-white font-semibold py-3 rounded-lg hover:cursor-pointer transition
-            ${cuteMode ? "bg-[#9C7777] hover:bg-[#bf9393]" : "bg-[#B7AABF] hover:bg-[#9884A3]" }
+        <button type="submit" className={`w-full font-semibold py-3 rounded-lg hover:cursor-pointer transition
+            ${cuteMode ? "text-gray-200 bg-[#9C7777] hover:bg-[#bf9393]" : "text-white bg-[#B7AABF] hover:bg-[#9884A3]" }
         `}> {cuteMode ? "send message" : "Send Message"}</button>
       </form>
     </section>

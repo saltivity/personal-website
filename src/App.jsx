@@ -34,16 +34,17 @@ function App() {
       ? "min-h-screen bg-[#e6daca] text-black overflow-hidden transition-all duration-500"
       : "min-h-screen bg-gray-900 text-white overflow-hidden transition-all duration-500"
   }
->
+  >
 
     
-    <button onClick={() => setCuteMode(!cuteMode)} className={
+    {!projectOpen && (<button onClick={() => setCuteMode(!cuteMode)} className={
       cuteMode ? "w-20 h-20 fixed bottom-4 right-4 p-3 bg-white hover:bg-gray-100 rounded-full shadow-lg z-50 transition-colors"
       : "w-20 h-20 fixed bottom-4 right-4 p-3 bg-[#7A6983] hover:bg-[#9884A3] rounded-full shadow-lg z-50 transition-colors"}>
       <Flower className= {
         cuteMode ? "w-10 h-10 translate-x-2 text-[#9C7777]"
         : "w-10 h-10 translate-x-2 text-white-300"}/>
-    </button>
+    </button>)}
+
     <Navbar cuteMode={cuteMode} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact} scrollToHome={scrollToHome}/>
     <Home cuteMode={cuteMode} ref={homeRef}/>
     <Projects cuteMode={cuteMode} setProjectOpen={setProjectOpen} ref={projectsRef}/>
