@@ -13,8 +13,8 @@ const Projects = forwardRef(({setProjectOpen, cuteMode}, ref) => {
 
             
             <div className="relative flex items-center justify-center">
-                {cuteMode && (<img className="absolute w-50 -translate-x-[180%] top-1/2 -translate-y-[75%] rotate-45 z-0 animate-[shake_1.5s_steps(1)_infinite]" src="src/assets/flower sticker 8.png"/>)}
-                {cuteMode && (<img className="absolute w-50 translate-x-[170%] top-1/2 -translate-y-[75%] rotate-335 z-0 animate-[shake_1.5s_steps(1)_infinite]" src="src/assets/flower sticker 6.png"/>)}
+                {cuteMode && (<img className="absolute w-50 -translate-x-[180%] top-1/2 -translate-y-[75%] rotate-45 z-0 animate-[shake_2s_steps(1)_infinite]" src="src/assets/flower sticker 8.png"/>)}
+                {cuteMode && (<img className="absolute w-50 translate-x-[170%] top-1/2 -translate-y-[75%] rotate-335 z-0 animate-[shake_2s_steps(1)_infinite]" src="src/assets/flower sticker 6.png"/>)}
 
                 {cuteMode && (<img className="absolute z-0 top-1/2 left-1/2 -translate-y-41 -translate-x-50 w-100 h-50" src="src/assets/paper tape red.png"/>)}
                 

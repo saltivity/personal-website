@@ -24,8 +24,8 @@ const Contact = forwardRef(({cuteMode}, ref) => {
       <div className='flex items-center justify-center'>
         {cuteMode && (<img className="absolute z-0 top-1/2 left-1/2 -translate-y-93 -translate-x-50 w-100 h-50" src="src/assets/paper tape red.png"/>)}
         <h2 className={"relative text-gray-200 -translate-y-10 text-3xl sm:text-5xl font-semibold text-center mb-8 z-10"}> {cuteMode ? "contact me" : "Contact Me"}</h2>
-        {cuteMode && (<img className="absolute w-84 left-1/2 translate-x-[80%] top-1/2 -translate-y-[120%] rotate-225 z-0 animate-[shake_1.5s_steps(1)_infinite]" src="src/assets/flower sticker 1.png"/>)}
-        {cuteMode && (<img className="absolute w-80 left-1/2 -translate-x-[180%] top-1/2 -translate-y-[120%] rotate-75 z-0 animate-[shake_1.5s_steps(1)_infinite]" src="src/assets/flower sticker 2.png"/>)}
+        {cuteMode && (<img className="absolute w-84 left-1/2 translate-x-[80%] top-1/2 -translate-y-[120%] rotate-225 z-0 animate-[shake_2s_steps(1)_infinite]" src="src/assets/flower sticker 1.png"/>)}
+        {cuteMode && (<img className="absolute w-80 left-1/2 -translate-x-[180%] top-1/2 -translate-y-[120%] rotate-75 z-0 animate-[shake_2s_steps(1)_infinite]" src="src/assets/flower sticker 2.png"/>)}
       </div>
 
       

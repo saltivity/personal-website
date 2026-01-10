@@ -13,7 +13,7 @@ export const projects = [
     title: "Personal Website",
     shortDesc: "This website!",
     image: "src/assets/website pic .png",
-    details: "I taught myself React and TailwindCSS to create this website over the course of around 2 weeks. Clicking the button on the bottom left will turn the website's design into something that represents my personality a bit more :)",
+    details: "I taught myself React and TailwindCSS to create this website over the course of around 2 weeks. Clicking the button on the bottom right will turn the website's design into something that represents my personality a bit more :)",
     tech: ["React", "Vite", "TailwindCSS"],
     link: "https://example.com",
   },
