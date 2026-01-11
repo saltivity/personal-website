@@ -13,7 +13,7 @@ const Home = forwardRef(( {cuteMode}, ref ) => {
                             <span> {cuteMode ? "hi, i'm allison!" : "Hi, I'm Allison!"}</span>
                         </h1>
                         <p className="text-md sm:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-8">
-                                I’m a Computer Science student at the University of Washington with interests in AI and machine learning, game development, and software engineering. I enjoy designing and building thoughtful, engaging projects while continuously learning and improving my skills. YAY
+                                I’m a Computer Science student at the University of Washington with interests in AI and machine learning, game development, and software engineering. I enjoy designing and building thoughtful, engaging projects while continuously learning and improving my skills.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-12">
                             <a href="/resume.pdf" download="Allison_Wang_Resume.pdf">
@@ -25,7 +25,7 @@ const Home = forwardRef(( {cuteMode}, ref ) => {
                         </div>
                     </div> 
                     <div className="relative ">
-                        {cuteMode ? (<img className="-translate-y-30 lg:-translate-y-0 w-100 lg:w-150 z-10 lg:-translate-x-20" src="assets/polaroid frame.png"/>) : <img className="border-10 border-solid -translate-y-30 lg:-translate-y-3 lg:translate-x-0 w-80 sm:w-100 z-10 lg:-translate-x-20" src="src/assets/face pic 1.JPEG"/>}
+                        {cuteMode ? (<img className="-translate-y-30 lg:-translate-y-0 w-100 lg:w-150 z-10 lg:-translate-x-20" src="assets/polaroid frame.png"/>) : <img className="border-10 border-solid -translate-y-30 lg:-translate-y-3 lg:translate-x-0 w-80 sm:w-100 z-10 lg:-translate-x-20" src="assets/face pic 1.JPEG"/>}
                     </div>
                 </div>
                 

@@ -1,9 +1,7 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
-import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import Socials from "./components/Socials";
 import { useState, useRef } from "react";
 import { Flower, User } from "lucide-react";
@@ -50,8 +48,6 @@ function App() {
     <Projects cuteMode={cuteMode} setProjectOpen={setProjectOpen} ref={projectsRef}/>
     <Socials cuteMode={cuteMode} projectOpen={projectOpen}/>
     <Contact cuteMode={cuteMode} ref={contactRef}/>
-    <Footer cuteMode={cuteMode}/>
-
   </div>;
 }
 
