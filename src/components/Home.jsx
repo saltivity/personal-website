@@ -16,7 +16,7 @@ const Home = forwardRef(( {cuteMode}, ref ) => {
                                 I’m a Computer Science student at the University of Washington with interests in AI and machine learning, game development, and software engineering. I enjoy designing and building thoughtful, engaging projects while continuously learning and improving my skills.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-12">
-                            <a href="/resume.pdf" download="Allison_Wang_Resume.pdf">
+                            <a href="resume.pdf" download="Allison_Wang_Resume.pdf">
                                 <button className={`"group h-10 w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:scale-102 hover:bg-[#9884A3] hover:cursor-pointer flex items-center justify-center"
                                 ${cuteMode ? "bg-[#9C7777] text-gray-200 hover:bg-[#bf9393] hover:cursor-pointer" : "text-white bg-[#B7AABF] hover:bg-[#9884A3] hover:cursor-pointer"}`}>
                                     <span>Resume</span>
