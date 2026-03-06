@@ -17,4 +17,13 @@ export const projects = [
     tech: ["React", "Vite", "TailwindCSS"],
     link: "https://github.com/saltivity/personal-website",
   },
+  {
+    id: 3,
+    title: "Seattle Sidewalk Accessibility",
+    shortDesc: "DubsTech Dataon 2026 3rd Place Winner in Access to Accesibility",
+    image: "assets/sidwalk pic.png",
+    details: "I used Python to generate multiple interactive maps to display data regarding sidwalk accessibility in Seattle. I also used Tableau to visualize the severity of sidwalk issues in different Seattle neighborhoods. Finally, I designed a \"Severity Score\" and used it and the other information to provide recommendations on how to improve sidwalk accessibility in Seattle.",
+    tech: ["Python", "GeoPandas", "Tableau", "GeoPandas"],
+    link: "https://alina-cheng.github.io/Seattle-Sidewalk-Accessibility/",
+  },
 ];
